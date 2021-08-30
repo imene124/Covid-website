@@ -1,0 +1,98 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+*{
+
+    padding: 0;
+    margin:0;
+}
+//navbar
+//items of navbar css
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    background-image: url('../svg/covid.svg');
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:14px 20px  0 5px;
+    flex-direction: row;
+}
+
+.logo div{
+    font-family: Gupter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 46px;
+    /* identical to box height */
+    left:90px;
+    text-transform: uppercase;
+    position: absolute;
+    color: rgba(71, 151, 122, 0.48);
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left:800px;
+    padding-top: 22px ;
+}
+nav ul li{
+    width: 130px;
+    height: 21px;
+    left: 40px;
+    top: 22px;
+    list-style-type: none; //eliminer les pts
+
+}
+nav ul li a {
+    font-family: Gupter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+//button css
+h1{
+    color: #000000;
+    font-family: Gupter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    right: 30px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    top: 7px;
+    width:80px;
+    height: 30px;
+}
+
+
+
