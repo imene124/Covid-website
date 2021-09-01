@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Gugi&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10951,10 +10951,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-body {
-  background-image: url(/images/covid.svg?aac5b36078ec0ab0e7b558b4e87a12db);
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
 }
 
 .logo {
@@ -10966,6 +10967,7 @@ body {
 }
 
 .logo div {
+  position: absolute;
   font-family: Gupter;
   font-style: normal;
   font-weight: bold;
@@ -10974,7 +10976,6 @@ body {
   /* identical to box height */
   left: 90px;
   text-transform: uppercase;
-  position: absolute;
   color: rgba(71, 151, 122, 0.48);
 }
 
@@ -11027,5 +11028,242 @@ h1 {
   top: 7px;
   width: 80px;
   height: 30px;
+  box-shadow: 0 9px white;
+}
+
+button:after {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.background {
+  position: fixed;
+  top: 75px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 250px;
+  flex-direction: column;
+  width: 100%;
+  left: 100px;
+}
+
+p {
+  width: 500px;
+  height: 162px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+h2 {
+  width: 500px;
+  height: 100px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: #000000;
+}
+
+button {
+  position: relative;
+  width: 232px;
+  height: 64px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  justify-content: center;
+  color: #FFFFFF;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  text-align: center;
+  right: 30px;
+  opacity: 1;
+  background: #A7CDBF;
+  border-radius: 16px;
+  left: 120px;
+  top: 0;
+  bottom: 8px;
+}
+
+.formul {
+  position: fixed;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 500px;
+  gap: 10px;
+}
+
+.formul h4 {
+  padding-top: 90px;
+  font-family: Gupter;
+  font-size: 40px;
+  line-height: 24px;
+  text-align: center;
+  color: gray;
+}
+
+.formul h5 {
+  padding-top: 10px;
+  font-family: Gugi;
+  font-size: 40px;
+  line-height: 24px;
+  text-align: center;
+  color: grey;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 530px;
+  padding-top: 200px;
+  justify-content: space-between;
+  position: fixed;
+  gap: 19px;
+}
+
+.form-control1 {
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 10px;
+  width: 380px;
+  height: 50px;
+  border-radius: 4px;
+  outline: none;
+  color: #888888;
+  background: white;
+  border: 1px solid #C8C8C8;
+  padding-left: 10px;
+}
+
+.form-control2 {
+  border-radius: 8px;
+  outline: none;
+  width: 380px;
+  height: 50px;
+  border-radius: 4px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 10px;
+  outline: none;
+  color: #888888;
+  background: white;
+  border: 1px solid #C8C8C8;
+  padding-left: 10px;
+}
+
+.form-control3 {
+  color: #888888;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #C8C8C8;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+  border-radius: 4px;
+  width: 380px;
+  height: 140px;
+  background: white;
+  outline: none;
+  padding-left: 10px;
+  padding-bottom: 70px;
+  position: static;
+}
+
+.form-control4 {
+  border: 1px solid #C8C8C8;
+  background: #A7CDBF;
+  border-radius: 4px;
+  /* Inside Auto Layout */
+  width: 439px;
+  height: 45px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  color: #FFFFFF;
+  flex: none;
+  left: initial;
+}
+
+.icone img {
+  display: inline;
+  top: 640px;
+  position: relative;
+  left: 500px;
+}
+
+p {
+  position: relative;
+  display: inline;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #888888;
+  align-content: center;
+  padding: 10px;
+  top: 640px;
+  left: 500px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  /* on le colle en bas */
+  width: 100%;
+  height: 40px;
+  right: 30px;
+  font-family: Gupter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
 }
 
