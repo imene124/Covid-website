@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/contacts', function () {
-    return view('contact');
-});
+// to connect data into controller
+Route::post('/contacts', 'datacontroller@index')->name('data.index');
+Route::get('/contacts', 'datacontroller@submit');

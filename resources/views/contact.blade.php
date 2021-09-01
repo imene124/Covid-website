@@ -18,8 +18,8 @@
 </div>
 <!-- we make our form with method post to make it in relation with our database -->
 
-    <form  action="/">
-        @csrf
+    <form  method="POST" action="/contacts">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
             <input type="text" class="form-control1" name="name" id="name"  placeholder="Your name" >
         </div>

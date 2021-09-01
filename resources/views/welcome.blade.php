@@ -15,12 +15,12 @@
 <img class="background" src="/svg/covid.svg" >
 <div class="container">
 <h2>Welcome to Our Corona Virus website </h2>
-<p>Everyone's Talking About Coronavirus Disease 2019 (COVID-19)
+<p2>Everyone's Talking About Coronavirus Disease 2019 (COVID-19)
     and you are inundated with information about
     the virus and how to protect yourself from it.
     To properly prepare and protect yourself,
     you and your loved ones,
-    it is essential that you have factual data. </p>
+    it is essential that you have factual data. </p2>
     <button>Welcome</button>
 </div>
 @extends('layout')
