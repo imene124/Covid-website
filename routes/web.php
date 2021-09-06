@@ -17,3 +17,9 @@ Route::get('/', function () {
 // to connect data into controller
 Route::post('/contacts', 'datacontroller@index')->name('data.index');
 Route::get('/contacts', 'datacontroller@submit');
+
+
+// the page of protection
+Route::get('/protection', function () {
+    return view('protect');
+});

@@ -9,7 +9,7 @@
 
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Dashboard</a></li>
-                <li><a href="/">Protection</a></li>
+                <li><a href="/protection">Protection</a></li>
                 <li><a href="/contacts">Contact Us</a></li>
             </ul>
     </nav>
