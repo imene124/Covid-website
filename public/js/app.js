@@ -49871,6 +49871,47 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+var url = "https://disease.sh/v3/covid-19/historical/all";
+fetch(url).then(function (data) {
+  return data.json();
+}).then(function (data) {
+  console.log(data);
+  var deaths = Object.values(data.deaths);
+  var dates = Object.keys(data.deaths);
+  var ctx = document.getElementById("root").getContext("2d");
+  var config = {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: '# of Deaths',
+        data: deaths,
+        backgroundColor: ["white"],
+        borderWidth: 2,
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          ticks: {
+            color: "blue",
+            fontSize: 14
+          }
+        },
+        x: {
+          ticks: {
+            color: "blue",
+            fontSize: 14
+          }
+        }
+      }
+    }
+  };
+  var myChart = new Chart(ctx, config);
+});
 
 /***/ }),
 

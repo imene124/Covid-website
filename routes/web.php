@@ -23,3 +23,7 @@ Route::get('/contacts', 'datacontroller@submit');
 Route::get('/protection', function () {
     return view('protect');
 });
+
+Route::get('/dash', function () {
+    return view('dashboard');
+});

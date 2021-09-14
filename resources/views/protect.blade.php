@@ -93,5 +93,10 @@
  </div>
 
 </span>
+<footer1>
+    <h6>Copyright &copy;  CoronaVirus, All Rights Reserve . </h6>
+</footer1>
+
+
 </body>
 </html>

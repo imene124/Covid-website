@@ -24,6 +24,8 @@ header
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
+    background: white;
+
 }
 
 .logo {
@@ -334,6 +336,20 @@ footer{
 
     color: #000000;
 }
+footer1{
+    position:absolute;
+    bottom:0;  /* on le colle en bas */
+    width:100%;
+    top:1200px;
+    right: 30px;
+    font-family: Gupter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+
+    color: #000000;
+}
 .title{
     display: flex;
     flex-direction: column;
@@ -365,7 +381,7 @@ h9{
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: absolute;
+    position:center;
     gap:250px;
     padding-top: 50px;
     padding-bottom: 150px;
@@ -383,7 +399,7 @@ h9{
 .card {
     width: 250px;
     left: 150px;
-    position: relative;
+
 }
 .card__content {
     text-align: center;
@@ -552,7 +568,6 @@ h9{
     position: relative;
     padding: 150px 20px;
     transition: transform 3s;
-    // background: pink;
     transform-style: preserve-3d;
 }
 .card__three:hover .card__content__three {
@@ -776,7 +791,10 @@ h9{
     background: #333;
 }
 
-body {
-    scroll-behavior:smooth;
 
+.dash{
+    padding-top: 80px;
+    padding-left: 50px;
+    width: 60vw;
+    height: 30vh;
 }
