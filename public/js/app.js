@@ -49870,12 +49870,16 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 
 var app = new Vue({
   el: '#app'
-});
+}); // desired endpoint URL
+
 var url = "https://disease.sh/v3/covid-19/historical/all";
-fetch(url).then(function (data) {
+fetch(url) // convert response to JSON
+.then(function (data) {
   return data.json();
-}).then(function (data) {
-  console.log(data);
+}) // console.log converted JSON
+.then(function (data) {
+  console.log(data); // keys and values we want to add
+
   var deaths = Object.values(data.deaths);
   var dates = Object.keys(data.deaths);
   var ctx = document.getElementById("root").getContext("2d");
@@ -49884,27 +49888,131 @@ fetch(url).then(function (data) {
     data: {
       labels: dates,
       datasets: [{
-        label: '# of Deaths',
+        label: 'Peopel dead with covid19',
         data: deaths,
         backgroundColor: ["white"],
-        borderWidth: 2,
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
-        tension: 0.1
+        tension: 0.4,
+        borderWidth: 4
       }]
     },
     options: {
+      responsive: true,
+      animations: {
+        radius: {
+          duration: 400,
+          easing: 'linear',
+          loop: function loop(context) {
+            return context.active;
+          }
+        }
+      },
+      hoverRadius: 12,
+      hoverBackgroundColor: 'gray',
+      interaction: {
+        mode: 'nearest',
+        intersect: false,
+        axis: 'x'
+      },
       scales: {
         y: {
           ticks: {
-            color: "blue",
+            color: "gray",
             fontSize: 14
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+            drawOnChartArea: false,
+            drawTicks: false
           }
         },
         x: {
           ticks: {
-            color: "blue",
-            fontSize: 14
+            color: "gray",
+            fontSize: 20,
+            fontFamily: "Helvatica"
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+            drawOnChartArea: false,
+            drawTicks: false
+          }
+        }
+      }
+    }
+  };
+  var myChart = new Chart(ctx, config);
+});
+fetch(url).then(function (dat) {
+  return dat.json();
+}).then(function (dat) {
+  console.log(dat);
+  var cases = Object.values(dat.cases);
+  var dates = Object.keys(dat.cases);
+  var ctx = document.getElementById("rooth").getContext("2d");
+  var config = {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: 'Peopel sick with covid19',
+        data: cases,
+        backgroundColor: ["white"],
+        fill: false,
+        fontSize: 15,
+        borderColor: 'rgba(71, 151, 122, 0.88)',
+        cubicInterpolationMode: 'default',
+        Tension: 1,
+        borderWidth: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      animations: {
+        radius: {
+          duration: 400,
+          easing: 'linear',
+          loop: function loop(context) {
+            return context.active;
+          }
+        }
+      },
+      hoverRadius: 12,
+      hoverBackgroundColor: 'pink',
+      interaction: {
+        mode: 'nearest',
+        intersect: false,
+        axis: 'x'
+      },
+      tooltips: {
+        enabled: true
+      },
+      scales: {
+        y: {
+          ticks: {
+            color: "gray",
+            fontSize: 20
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+            drawOnChartArea: false,
+            drawTicks: false
+          }
+        },
+        x: {
+          ticks: {
+            color: "gray",
+            fontSize: 20
+          },
+          grid: {
+            display: false,
+            drawBorder: false,
+            drawOnChartArea: false,
+            drawTicks: false
           }
         }
       }
